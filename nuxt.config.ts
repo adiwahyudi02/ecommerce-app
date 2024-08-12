@@ -2,6 +2,11 @@
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
+  runtimeConfig: {
+    public: {
+      apiBase: "https://ecommerce-app-api-prod.vercel.app",
+    },
+  },
   vite: {
     css: {
       preprocessorOptions: {
