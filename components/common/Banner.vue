@@ -31,7 +31,7 @@ interface IImages {
 }
 
 interface IBannerSliderProps {
-  data: IImages;
+  data: IImages[];
   isLoading?: boolean;
 }
 
