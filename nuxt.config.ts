@@ -15,7 +15,10 @@ export default defineNuxtConfig({
   css: [
     // main style
     "@/assets/styles/main.sass",
+    // toast
+    "vue-toastification/dist/index.css",
   ],
+  build: { transpile: ["vue-toastification"] },
   components: [
     // custom scanner for component auto-import
     { path: "~/components/page", prefix: "" },
