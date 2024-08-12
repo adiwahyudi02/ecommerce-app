@@ -16,6 +16,7 @@
   "dependencies": {
     "@nuxt/image": "^1.7.0",
     "nuxt": "^3.12.4",
+    "nuxt-swiper": "^1.2.2",
     "sass": "^1.77.8",
     "vue": "latest"
   },
