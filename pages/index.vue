@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Banner :data="banners" />
     <ProductHighestCommission
       :data="highestCommissionProducts"
       :is-loading="isLoading && !highestCommissionProducts.length"
@@ -39,6 +40,21 @@ useInfiniteScroll({
   fetchNextPage: fetchNextPageProducts,
   isShouldFetch: hasMore.value && !isLoading.value,
 });
+
+const banners = [
+  {
+    src: "/images/banner-1.jpg",
+    alt: "banner image 1",
+  },
+  {
+    src: "/images/banner-2.jpg",
+    alt: "banner image 2",
+  },
+  {
+    src: "/images/banner-3.jpg",
+    alt: "banner image 3",
+  },
+];
 </script>
 
 <style lang="sass" scoped>
