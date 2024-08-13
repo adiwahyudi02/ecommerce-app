@@ -1,1 +1,4 @@
 
+User-agent: *
+Disallow: /shop
+Disallow: /404
