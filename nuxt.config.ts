@@ -5,6 +5,8 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       apiBase: "https://ecommerce-app-api-prod.vercel.app",
+      urlBase: "https://ecommerce-app-prod.vercel.app",
+      websiteName: "ecommerce app",
     },
   },
   vite: {
@@ -33,4 +35,18 @@ export default defineNuxtConfig({
     "~/components",
   ],
   modules: ["@nuxt/icon", "@nuxt/image", "nuxt-swiper", "@pinia/nuxt"],
+  app: {
+    // transition
+    pageTransition: { name: "page", mode: "out-in" },
+    layoutTransition: { name: "layout", mode: "out-in" },
+
+    // set global head
+    head: {
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      htmlAttrs: {
+        lang: "en",
+      },
+    },
+  },
 });

@@ -56,6 +56,8 @@
 </template>
 
 <script lang="ts" setup>
+import { SEO_META } from "~/constants/seoMeta";
+
 const nuxtApp = useNuxtApp();
 
 nuxtApp.hook("page:finish", () => {
@@ -82,6 +84,22 @@ const { isProductAddedToShop } = storeToRefs(shopStore);
 await fetchProduct(route.params.id as string);
 
 const data = product.value;
+
+const {
+  public: { urlBase, websiteName },
+} = useRuntimeConfig();
+const title = `${data?.name} | ${data?.description} | ${websiteName}`;
+useServerSeoMeta({
+  ogTitle: () => title,
+  title: () => title,
+  description: () => data?.description,
+  ogDescription: () => data?.description,
+  ogImage: () => data?.images[0],
+  ogImageUrl: () => data?.images[0],
+  ogUrl: () => `${urlBase}/products/${data?.id}`,
+  ogLocale: () => SEO_META.ogLocale,
+  ogType: () => SEO_META.ogType as "website",
+});
 
 // handle variant
 const initialVariant = data?.variants.at(0);
