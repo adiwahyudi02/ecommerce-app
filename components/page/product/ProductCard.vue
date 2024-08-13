@@ -1,5 +1,5 @@
 <template>
-  <Card class="card">
+  <Card class="card" data-testid="product-card">
     <NuxtLink :to="`/products/${id}`">
       <div class="card__image__wrapper">
         <NuxtImg
@@ -10,32 +10,44 @@
           :src="image"
           :alt="`product image ${name}`"
           class="card__image"
+          data-testid="product-image"
         />
-        <div class="card__image__shipping">Free Shipping</div>
-        <div class="card__image__commission">{{ commision }} Commision</div>
+        <div class="card__image__shipping" data-testid="shipping-label">
+          Free Shipping
+        </div>
+        <div class="card__image__commission" data-testid="commission-label">
+          {{ commision }} Commission
+        </div>
       </div>
     </NuxtLink>
     <div class="card__description__wrapper">
       <div>
-        <p class="card__location">{{ location }}</p>
-        <nuxt-link :to="`/products/${id}`" class="card__title">{{
-          name
-        }}</nuxt-link>
+        <p class="card__location" data-testid="product-location">
+          {{ location }}
+        </p>
+        <nuxt-link
+          :to="`/products/${id}`"
+          class="card__title"
+          data-testid="product-title"
+          >{{ name }}</nuxt-link
+        >
       </div>
       <div>
         <div class="card__rating-price__wrapper">
           <div>
             <p class="card__price__label">Start From</p>
             <div class="card__price__wrapper">
-              <p class="card__price">{{ rupiahPrefix(resellerPrice) }}</p>
-              <p class="card__price--discount">
+              <p class="card__price" data-testid="reseller-price">
+                {{ rupiahPrefix(resellerPrice) }}
+              </p>
+              <p class="card__price--discount" data-testid="retail-price">
                 {{ rupiahPrefix(retailPriceLabel) }}
               </p>
             </div>
           </div>
           <ProductRating :amount="rating" />
+          <ProductShareButton v-if="showShareButton" @on-share="handleShare" />
         </div>
-        <ProductShareButton v-if="showShareButton" @on-share="handleShare" />
       </div>
     </div>
   </Card>

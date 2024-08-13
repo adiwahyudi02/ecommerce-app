@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div data-testid="product-list">
     <div class="product-list">
       <ProductCard
         v-for="item in data"
@@ -17,10 +17,10 @@
         :shareable-link="item.shareableLinkWithoutPrice"
       />
     </div>
-    <Loading v-if="isLoading" />
-    <NoData v-else-if="!isLoading && !data.length"
-      >There is no product list</NoData
-    >
+    <Loading v-if="isLoading" data-testid="loading" />
+    <NoData v-else-if="!isLoading && !data.length" data-testid="no-data">
+      There is no product list
+    </NoData>
   </div>
 </template>
 

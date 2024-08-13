@@ -1,7 +1,12 @@
 <template>
   <div>
-    <h2>Highest Rating</h2>
-    <ProductSlider :data="data" :columns="columns" :is-loading="isLoading" />
+    <h2 data-testid="highest-rating-header">Highest Rating</h2>
+    <ProductSlider
+      :data="data"
+      :columns="columns"
+      :is-loading="isLoading"
+      data-testid="highest-rating-slider"
+    />
   </div>
 </template>
 

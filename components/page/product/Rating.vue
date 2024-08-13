@@ -1,6 +1,6 @@
 <template>
   <div class="rating__wrapper">
-    <div class="rating__icon__wrapper">
+    <div class="rating__icon__wrapper" data-testid="rating-wrapper">
       <Icon
         v-for="star in 5"
         :key="star"

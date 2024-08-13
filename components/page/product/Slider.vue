@@ -1,10 +1,10 @@
 <template>
   <div>
-    <Loading v-if="isLoading" />
-    <NoData v-else-if="!isLoading && !data.length"
+    <Loading v-if="isLoading" data-testid="loading" />
+    <NoData v-else-if="!isLoading && !data.length" data-testid="no-data"
       >There is no product list</NoData
     >
-    <div v-else>
+    <div v-else data-testid="product-slider">
       <Swiper
         :modules="[SwiperNavigation]"
         :slides-per-view="columns"
@@ -27,6 +27,7 @@
             :rating="item.rating"
             :show-share-button="false"
             style="width: auto"
+            data-testid="product-card"
           />
         </SwiperSlide>
         <SwiperSlide key="see-all" />
