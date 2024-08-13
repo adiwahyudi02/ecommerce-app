@@ -1,7 +1,7 @@
 <template>
-  <div class="blank-layout">
-    <div class="blank-layout__main">
-      <div class="blank-layout__content">
+  <div class="blank-layout" data-testid="blank-layout">
+    <div class="blank-layout__main" data-testid="blank-layout-main">
+      <div class="blank-layout__content" data-testid="blank-layout-content">
         <slot />
       </div>
     </div>

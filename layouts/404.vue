@@ -1,9 +1,14 @@
 <template>
-  <div class="notfound">
+  <div class="notfound" data-testid="notfound">
     <div>
-      <h1>Oops! Page Not Found</h1>
-      <p>Sorry, the page you are looking for does not exist.</p>
-      <div class="notfound__error__wrapper">
+      <h1 data-testid="notfound-heading">Oops! Page Not Found</h1>
+      <p data-testid="notfound-paragraph">
+        Sorry, the page you are looking for does not exist.
+      </p>
+      <div
+        class="notfound__error__wrapper"
+        data-testid="notfound-error-wrapper"
+      >
         <slot />
       </div>
     </div>

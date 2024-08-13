@@ -1,8 +1,8 @@
 <template>
-  <div class="default-layout">
-    <div class="default-layout__main">
-      <Navbar />
-      <div class="default-layout__content">
+  <div class="default-layout" data-testid="default-layout">
+    <div class="default-layout__main" data-testid="default-layout-main">
+      <Navbar data-testid="navbar" />
+      <div class="default-layout__content" data-testid="default-layout-content">
         <slot />
       </div>
     </div>
