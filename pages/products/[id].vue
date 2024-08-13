@@ -22,9 +22,11 @@
           />
           <Divider />
           <ProductDetailShareAndAdd
-            :add-label="'Add to shop'"
+            :add-label="
+              isProductAddedToShop ? 'Remove from shop' : 'Add to shop'
+            "
             @on-share="handleShare"
-            @on-add="handleAddToShop"
+            @on-add="handleAddOrRemoveToShop"
           />
           <Divider />
           <ProductDetailReceivedPoint :point="data?.point || 0" />
@@ -69,6 +71,12 @@ const route = useRoute();
 const productDetailStore = useProductDetailStore();
 const { product, isLoading: isLoadingDetail } = storeToRefs(productDetailStore);
 const { fetchProduct } = productDetailStore;
+
+// shop store
+const shopStore = useShopStore();
+const { addProductToShop, removeProductFromShop, checkIsProductAddedToShop } =
+  shopStore;
+const { isProductAddedToShop } = storeToRefs(shopStore);
 
 // fetch product detail
 await fetchProduct(route.params.id as string);
@@ -131,7 +139,21 @@ const handleShare = () => {
   shareToWhatsApp(data?.shareableLinkWithoutPrice || "");
 };
 
-const handleAddToShop = () => {};
+const handleAddOrRemoveToShop = () => {
+  if (data) {
+    if (isProductAddedToShop.value) {
+      removeProductFromShop(data);
+      return;
+    }
+    addProductToShop(data);
+  }
+};
+
+onMounted(() => {
+  if (data) {
+    checkIsProductAddedToShop(data);
+  }
+});
 </script>
 
 <style lang="sass" scoped>
