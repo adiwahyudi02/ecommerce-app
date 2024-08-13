@@ -1,4 +1,4 @@
-# Nuxt 3 Minimal Starter
+# Ecommerce App
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
@@ -73,3 +73,61 @@ bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+
+## Testing
+
+Run vitest:
+
+```bash
+# npm
+npm run test
+
+# pnpm
+pnpm run test
+
+# yarn
+yarn test
+
+# bun
+bun run test
+```
+
+## Coverage
+
+Run testing coverage:
+
+```bash
+# npm
+npm run coverage
+
+# pnpm
+pnpm run coverage
+
+# yarn
+yarn coverage
+
+# bun
+bun run coverage
+```
+
+## Lint
+
+Run Lint:
+
+```bash
+# npm
+npm run lint
+npm run lintfix
+
+# pnpm
+pnpm run lint
+pnpm run lintfix
+
+# yarn
+yarn lint
+yarn lintfix
+
+# bun
+bun run lint
+bun run lintfix
+```
