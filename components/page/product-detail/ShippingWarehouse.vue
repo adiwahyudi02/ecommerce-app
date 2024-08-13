@@ -2,10 +2,10 @@
   <div class="shipment__wrapper">
     <p class="shipment__label">Shipping Warehouse</p>
     <Card class="shipment__card">
-      <p class="shipment__warehouse">
+      <p class="shipment__warehouse" data-testid="warehouse-title">
         {{ title }}
       </p>
-      <p class="shipment__address">
+      <p class="shipment__address" data-testid="warehouse-address">
         {{ address }}
       </p>
     </Card>

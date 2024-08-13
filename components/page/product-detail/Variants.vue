@@ -1,20 +1,26 @@
 <template>
   <div class="variant__wrapper">
     <div>
-      <p class="variant__label">{{ labelVariant }}</p>
+      <p class="variant__label" data-testid="variant-label">
+        {{ labelVariant }}
+      </p>
       <ButtonList
         :buttons="variantButtonList"
         :selected="selectedVariant"
         size="sm"
+        data-testid="variant-button-list"
         @on-selected="handleSelectedVariant"
       />
     </div>
     <div>
-      <p class="variant__label">{{ labelSubVariant }}</p>
+      <p class="variant__label" data-testid="sub-variant-label">
+        {{ labelSubVariant }}
+      </p>
       <ButtonList
         :buttons="subVariantButtonList"
         :selected="selectedSubVariant"
         size="sm"
+        data-testid="sub-variant-button-list"
         @on-selected="handleSelectedSubVariant"
       />
     </div>

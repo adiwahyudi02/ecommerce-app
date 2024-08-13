@@ -2,22 +2,22 @@
   <div class="price">
     <div>
       <p class="price__label">Customer Price</p>
-      <p class="price__value">
+      <p class="price__value" data-testid="customer-price">
         {{ rupiahPrefix(customerPrice) }}
       </p>
     </div>
     <div>
       <p class="price__label">Reseller Price</p>
-      <p class="price__value--reseller">
+      <p class="price__value--reseller" data-testid="reseller-price">
         {{ rupiahPrefix(resellerPriceMin) }}
       </p>
-      <p class="price__value--retail">
+      <p class="price__value--retail" data-testid="retail-price">
         {{ rupiahPrefix(retailPrice) }}
       </p>
     </div>
     <div>
-      <p class="price__label">Commision</p>
-      <p class="price__value--commision">
+      <p class="price__label">Commission</p>
+      <p class="price__value--commision" data-testid="commission">
         {{ rupiahPrefix(commission) }}
       </p>
     </div>

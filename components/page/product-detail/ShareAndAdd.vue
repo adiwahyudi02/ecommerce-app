@@ -2,9 +2,14 @@
   <div class="buttons__wrapper">
     <ProductShareButton
       :share-label="shareLabel"
+      data-testid="share-button"
       @on-share="$emit('onShare')"
     />
-    <ProductAddShopButton :add-label="addLabel" @on-add="$emit('onAdd')" />
+    <ProductAddShopButton
+      :add-label="addLabel"
+      data-testid="add-button"
+      @on-add="$emit('onAdd')"
+    />
   </div>
 </template>
 

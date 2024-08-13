@@ -5,10 +5,9 @@
     <p class="point__description">
       Earn more points to take advantage of other benefits
     </p>
-    <p class="point__amount">Amount: {{ point }}</p>
+    <p class="point__amount" data-testid="point-amount">Amount: {{ point }}</p>
   </Card>
 </template>
-
 <script setup lang="ts">
 defineProps<{
   point: string | number;

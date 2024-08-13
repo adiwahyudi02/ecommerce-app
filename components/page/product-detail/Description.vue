@@ -1,7 +1,9 @@
 <template>
   <div>
-    <p class="description__label">Product Description</p>
-    <p class="description">
+    <p class="description__label" data-testid="description-label">
+      Product Description
+    </p>
+    <p class="description" data-testid="description">
       {{ description }}
     </p>
   </div>

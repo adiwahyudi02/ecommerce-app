@@ -1,5 +1,5 @@
 <template>
-  <h1 class="title">
+  <h1 class="title" data-testid="title">
     {{ title }}
   </h1>
 </template>

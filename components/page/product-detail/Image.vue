@@ -27,6 +27,7 @@
         :src="slide.src"
         :alt="slide.alt"
         class="swiper__main__image"
+        data-testid="main-image"
       />
     </SwiperSlide>
   </Swiper>
@@ -46,6 +47,7 @@
         :src="slide.src"
         :alt="slide.alt"
         class="swiper__thumb__image"
+        data-testid="thumb-image"
       />
     </SwiperSlide>
   </Swiper>
