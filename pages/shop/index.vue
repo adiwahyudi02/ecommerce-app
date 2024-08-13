@@ -10,7 +10,7 @@ const {
 
 const title = `Shop | ${websiteName}`;
 
-useServerSeoMeta({
+useSeoMeta({
   ogTitle: () => title,
   title: () => title,
   description: () => SEO_META.description,
