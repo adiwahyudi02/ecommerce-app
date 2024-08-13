@@ -49,4 +49,9 @@ export default defineNuxtConfig({
       },
     },
   },
+  // set rendering rule
+  routeRules: {
+    // client rendering
+    "/shop": { ssr: false },
+  },
 });
