@@ -34,7 +34,13 @@ export default defineNuxtConfig({
     // It's important that this comes last if you have overrides you wish to apply
     "~/components",
   ],
-  modules: ["@nuxt/icon", "@nuxt/image", "nuxt-swiper", "@pinia/nuxt"],
+  modules: [
+    "@nuxt/icon",
+    "@nuxt/image",
+    "nuxt-swiper",
+    "@pinia/nuxt",
+    "@nuxt/test-utils/module",
+  ],
   app: {
     // transition
     pageTransition: { name: "page", mode: "out-in" },
