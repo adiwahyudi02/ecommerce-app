@@ -17,7 +17,15 @@
         space-between="8px"
       >
         <SwiperSlide v-for="(item, index) in data" :key="index">
-          <NuxtImg :src="item.src" :alt="item.alt" class="swiper__image" />
+          <NuxtImg
+            format="webp"
+            fit="cover"
+            :src="item.src"
+            :alt="item.alt"
+            width="500"
+            height="300"
+            class="swiper__image"
+          />
         </SwiperSlide>
       </Swiper>
     </div>

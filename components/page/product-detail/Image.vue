@@ -19,7 +19,15 @@
     class="swiper__main"
   >
     <SwiperSlide v-for="(slide, index) in images" :key="index">
-      <NuxtImg :src="slide.src" :alt="slide.alt" class="swiper__main__image" />
+      <NuxtImg
+        format="webp"
+        fit="cover"
+        width="300"
+        height="300"
+        :src="slide.src"
+        :alt="slide.alt"
+        class="swiper__main__image"
+      />
     </SwiperSlide>
   </Swiper>
   <Swiper
@@ -30,7 +38,15 @@
     @swiper="setThumbsSwiper"
   >
     <SwiperSlide v-for="(slide, index) in images" :key="index">
-      <NuxtImg :src="slide.src" :alt="slide.alt" class="swiper__thumb__image" />
+      <NuxtImg
+        format="webp"
+        fit="cover"
+        width="100"
+        height="100"
+        :src="slide.src"
+        :alt="slide.alt"
+        class="swiper__thumb__image"
+      />
     </SwiperSlide>
   </Swiper>
 </template>
