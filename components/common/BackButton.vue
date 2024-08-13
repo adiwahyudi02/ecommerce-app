@@ -1,7 +1,11 @@
 <template>
-  <Button variant="transparent" class="back-button">
-    <Icon name="material-symbols:arrow-back" class="back-button__icon" />
-    <p class="back-button__label">{{ label }}</p>
+  <Button variant="transparent" class="back-button" data-testid="back-button">
+    <div data-testid="back-button-icon">
+      <Icon name="material-symbols:arrow-back" class="back-button__icon" />
+    </div>
+    <p class="back-button__label" data-testid="back-button-label">
+      {{ label }}
+    </p>
   </Button>
 </template>
 

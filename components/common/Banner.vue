@@ -1,9 +1,9 @@
 <template>
   <div>
-    <Loading v-if="isLoading" />
-    <NoData v-else-if="!isLoading && !data.length"
-      >There is no banner list</NoData
-    >
+    <Loading v-if="isLoading" data-testid="loading" />
+    <NoData v-else-if="!isLoading && !data.length" data-testid="no-data">
+      There is no banner list
+    </NoData>
     <div v-else>
       <Swiper
         :modules="[SwiperPagination, SwiperAutoplay]"
@@ -15,8 +15,13 @@
         }"
         :pagination="{ clickable: true }"
         space-between="8px"
+        data-testid="swiper"
       >
-        <SwiperSlide v-for="(item, index) in data" :key="index">
+        <SwiperSlide
+          v-for="(item, index) in data"
+          :key="index"
+          data-testid="swiper-slide"
+        >
           <NuxtImg
             format="webp"
             fit="cover"

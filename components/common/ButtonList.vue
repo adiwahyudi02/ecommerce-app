@@ -5,6 +5,7 @@
       :key="index"
       :variant="selected === button.value ? 'primary' : 'outline'"
       :size="size"
+      data-testid="button"
       @click="$emit('onSelected', button)"
     >
       {{ button.label }}
