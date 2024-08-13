@@ -73,6 +73,7 @@ const setThumbsSwiper = (swiper: any) => {
 .swiper
   &__main
     border-radius: $border-radius-md
+    max-height: 28.125rem
 
     &__image
       width: 100%
